@@ -1,0 +1,96 @@
+/* welcome to the style file of this project! */
+
+* {
+    transition: all ease .2s ;
+    position: absolute;
+}
+
+.container{
+    width: 100vw;
+    min-height: 100vh;
+}
+
+body {
+    background-color: burlywood;
+}
+
+
+.square {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(138deg, rgba(128,181,255,1) 0%, rgba(255,204,204,1) 36%);
+    top: 600px;
+    left: 200px;
+    transform: rotate(70deg) scale(0.5, 2);
+}
+
+.square:hover{
+    transform: rotate(180deg);
+
+}
+
+.square-2 {
+    width: 400px;
+    height: 400px;
+    background-color:thistle;
+    border: 25px solid lime;
+    top: 100px;
+    left: 600px;
+    transform: skew(50deg) rotate(45deg);
+}
+
+.circle {
+    width: 600px;
+    height: 600px;
+    background-color:seagreen;
+    top: 400px;
+    left: 700px;
+    border-radius: 50%;
+    animation: blur 1s infinite alternate;
+}
+
+.circle-2 {
+    width: 700px;
+    height: 900px;
+    background-color:midnightblue;
+    top: 300px;
+    left: 800px;
+    border-radius: 50%;
+    opacity: 0.5;
+    animation: move 1s infinite alternate;
+}
+
+.circle-3 {
+    width: 400px;
+    height: 500px; 
+    top: 200px;
+    left: 1000px;
+    background-color: rgb(255,124,145,0.5);
+    border-radius: 50%;
+}
+
+.circle-2:hover ~ .circle-3 {
+    transform: scale(0.1);
+}
+
+
+
+@keyframes move {
+    from {
+        left: 200px;
+    } to {
+        left: 100px;
+    }
+}
+
+@keyframes blur {
+    from {
+        filter: blur(1px);
+    } to {
+        filter: blur(20px);
+    }
+}
+
+
+
+
